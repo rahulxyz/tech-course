@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+        .style-tag{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <!-- 1 CSS linking -->
+    
+    <div style="background:blue;color:white;">Inline CSS</div>
+    <div class="style-tag">style tag</div>
+
+    <div class="one">Something</div>
+
+    <br/>
+    <div>==============================</div>
+    <br/><br/>
+
+    <!-- 2 Selectors-->
+    <!-- id > class > tag -->
+    <div id="two-id">id</div>
+    <div class="two">Class</div>
+    <button>Submit</button>
+    <div class="two-tag">
+        <button>Submit2</button>
+    </div>
+
+    <button class="two-btn">Submit2</button>
+
+    <p class="two-class-1" id="two-id-1">
+        Priority
+    </p>
+
+    <br/>
+    <div>==============================</div>
+    <br/><br/>
+
+    <!-- 3. Combinator -->
+    <!-- 
+    descendant selector (space) : All selector nested within a parent selector
+    child selector (>) : All child selector at first level of nesting
+    adjacent sibling selector (+) : Only immmediately following selectors that are adjacent to a given selector
+    general sibling selector (~) : Only selectors following it at first level of nesting
+    --> 
+
+    <div class="child">
+        Something old
+    </div>
+
+    <div class="three">
+        <div class="child">
+            Something 3
+        </div>
+    </div>
+
+    <br/>
+    <div>==============================</div>
+    <br/><br/>
+
+
+    <!-- 4. Some Rules -->
+    <!-- Last Rule -->
+    <div class="four four-1">Four</div>
+
+    <div class="four-2">
+        <div class="four-3 four-5">
+            Nested Four
+        </div>
+    </div>
+
+
+    <br/>
+    <div>==============================</div>
+    <br/><br/>
+
+    <!-- 5. Units -->
+    <div class="five-parent">
+        <div class="five-child">
+            Five
+        </div>
+    </div>
+
+
+    <br/>
+    <div>==============================</div>
+    <br/><br/>
+
+    <!-- 6. Box Model -->
+    <div class="six">
+        Six
+    </div>
+
+    <br/>
+    <div>==============================</div>
+    <br/><br/>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+</body>
+</html>

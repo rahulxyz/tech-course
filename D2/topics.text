@@ -1,0 +1,71 @@
+
+1. CSS linking
+
+Inline > Internal > external
+
+
+2. Selector
+id > class > elememt
+Priority
+
+
+3.
+Combintor
+descendant selector (space)
+child selector (>) :
+adjacent sibling selector (+)
+general sibling selector (~)
+
+
+4. Some Rules
+Last rule
+
+Specificity in CSS
+1. id > class > tag
+2. Last Rule: Bottom most css
+3. More specific Nested selectors > single selector
+4. !important Highest specificity  (Un-recomended)
+
+
+5.
+Unit
+px, %, em, rem, 
+em: relative to parent
+rem : relative to root (best-practise)
+
+font-size 
+padding
+margin
+
+6.Box model
+box-sizing: border-box
+
+
+7.
+Media query : 
+max width
+write at end of css file from max to min
+
+
+common breakpoints:
+width: 1366px 720px 
+
+1920px
+1400px
+1366px
+1024px
+720px
+640px
+480px
+360px
+
+
+
+position: relative absolute
+
+
+pseudo class
+pseudo element
+
+
+pseudo element
