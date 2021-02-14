@@ -92,6 +92,76 @@ p{
 }
 
 
+.seven-p{
+    width: 100%;
+    height: 300px;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 20px;
+    position: relative;
+
+}
+
+.seven-c{
+    width: 100%;
+    height: 100px;
+    background-color: palegreen;
+    color: white;
+}
+
+.eight-p{
+    background-color: red;
+    width: 100%;
+
+}
+
+.eight-c{
+    background-color: palevioletred;
+    width: fit-content;
+    margin: auto;
+}
+
+.eight-c:after{
+    content: " new"
+}
+
+.eight-c::before{
+    content: " before"
+}
+
+.block-color{
+    background-color: blue;
+    height: 80px;
+    width: 100px;
+    position: relative;
+}
+
+.block-color:before{
+    position: absolute;
+    content:"";
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+
+    border-bottom: 5px solid black;
+    top:0;
+    left: 0;
+    margin-top: -5px;
+}
+
+.eight-p:hover{
+    background-color: purple;
+}
+
+.list li:nth-child(2){
+    font-size: 30px;
+}
+
+.eight-list .eigth:nth-child(2){
+    font-size: 40px;
+}
+
 @media(max-width: 1366px){
 
     .container{
