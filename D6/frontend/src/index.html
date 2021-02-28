@@ -15,8 +15,8 @@
                     <img src="../images/pattern-bg.png" class="img-contain" alt="search-bg">
                     <div class="description">
                         <p>URL Shortner</p>
-                        <input type="search" placeholder="Enter url eg. https://www.google.com"/>
-                        <img src="../images/icon-arrow.svg" >
+                        <input type="search" placeholder="Enter url eg. https://www.google.com" id="url-input"/>
+                        <img src="../images/icon-arrow.svg" alt="search" onclick="submitUrl()">
                     </div>
                 </div>
            </div>
@@ -25,19 +25,18 @@
        <section class="details">
         <div class="container">
             <div class="content">
-                <!-- <img src="../images/url-short-bg.png" alt="details-bg"> -->
                 <div class="description">
                 <ul>
                     <li>
                         <h6>Original</h6>
                         <p>Check 
-                            <a href="#">Here</a>
+                            <a href="#" id="url-original">Here</a>
                         </p>
                     </li>
 
                     <li>
                         <h6>Short Url</h6>
-                        <a href="#">Convert</a>
+                        <a href="#" id="url-short">Convert</a>
                     </li>
 
                     <li>
