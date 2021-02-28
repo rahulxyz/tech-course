@@ -1,0 +1,38 @@
+What is node ?
+MERN  -> Express.
+
+Rest -> Respresentational state transfer.
+
+www.linkedin.c0m - > aewewer
+
+MVC -> www.google.com -> <Html> --- 
+        
+        -> Higher bandwidht.
+        -> Higher coupling
+
+Rest ->
+    client -> Server -> DB
+
+    GET, POST, PUT, PATCH, DELETE
+
+    www.api.com/data
+
+    GET -> Getting some data from Server
+    POST -> Sending some data for processing on server.
+    PUT -> If data is not there make, or update the data.
+    PATCH -> Data updation.
+    DELETE -> Data deletion
+
+Data sending format -> XML,
+-> Json -> 
+-> Protobuf ->
+
+
+Soap -> interview
+
+1xx -> (Next class)
+
+2xx -> For success
+3xx -> Redirection
+4xx -> Not found
+5xx -> Internal server error
