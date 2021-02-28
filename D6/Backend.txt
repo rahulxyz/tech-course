@@ -36,3 +36,19 @@ Soap -> interview
 3xx -> Redirection
 4xx -> Not found
 5xx -> Internal server error
+
+
+const express = require('express');
+const app = express();
+
+app.get("/test",(req, res)=>{
+    res.send("This is from get");
+})
+
+app.post("/",(req, res)=>{
+    res.send("This is from post");
+})
+
+app.listen(3000, ()=>{
+    console.log("Server is ruuning on port 3000");
+})
