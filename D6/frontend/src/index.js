@@ -1,4 +1,5 @@
-const baseUrl = "https://tinytesturl.herokuapp.com/api/url";
+//const baseUrl = "https://tinytesturl.herokuapp.com/api/url";
+const baseUrl = "http://localhost:3000/api/url";
 
 const urlInput = document.getElementById("url-input");
 const urlOriginal = document.getElementById("url-original");
@@ -27,10 +28,9 @@ const submitUrl = ()=>{
     }).then(res=>{
         return res.json();
     }).then(data=>{
-        console.log(">>> ", data.tinyUrl)
         urlOriginal.href = data.bigUrl;
-        urlShort.href= baseUrl+"/"+data.tinyUrl;
-        urlShort.innerHTML = data.tinyUrl;
+        urlShort.href= baseUrl+"/"+data.smallUrl;
+        urlShort.innerHTML = data.smallUrl;
     })
 
     urlInput.value="";
