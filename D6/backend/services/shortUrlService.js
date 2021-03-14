@@ -15,6 +15,9 @@ module.exports = {
           msg: "Some fields missing",
         });
       }
+      if (!(url.startsWith("https://") || url.startsWith("http://"))) {
+        url = "https://" + url;
+      }
 
       const findUrlIfPresent = await findBigUrl(url);
 
