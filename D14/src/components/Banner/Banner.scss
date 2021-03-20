@@ -1,0 +1,29 @@
+.banner {
+    .content{
+        display: flex;
+
+        .start{
+            width: 50%;
+            
+        }
+        .end{
+            width: 50%;
+            
+        }
+    }
+}
+
+@media(max-width: 768px){
+    .banner {
+    .content{
+        flex-direction: column;
+        .start{
+            width: 100%;
+        }
+        .end{
+            width: 100%;
+
+        }
+    }
+    }
+}

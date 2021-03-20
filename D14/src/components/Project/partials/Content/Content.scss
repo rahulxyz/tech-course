@@ -1,0 +1,10 @@
+.skill-content{
+    text-align: start;
+    padding: 0 16px;
+}
+
+@media(max-width: 768px){
+    .skill-content{
+        text-align: center;
+    }
+}

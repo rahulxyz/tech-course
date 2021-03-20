@@ -1,0 +1,21 @@
+.navbar{
+    padding: 16px 0;
+    background-color: grey;
+    .content{
+        display: flex;
+        justify-content: space-between;
+        
+        .nav-list{
+            display: flex;
+
+            li{
+                margin-right: 8px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+
