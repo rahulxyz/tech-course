@@ -1,14 +1,14 @@
 .banner {
+    padding: 24px 0;
     .content{
         display: flex;
-
+        justify-content: space-between;
         .start{
-            width: 50%;
+            width: 48%;
             
         }
         .end{
-            width: 50%;
-            
+            width: 48%;
         }
     }
 }

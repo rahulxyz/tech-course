@@ -10,10 +10,10 @@ class Header extends Component {
                     <div className="content">
                         <div className="logo">Logo</div>
                         <ul className="nav-list">
-                            <li>Skills</li>
-                            <li>About Me</li>
-                            <li>Projects</li>
-                            <li>Education</li>
+                            <li><a href="#aboutMe">About Me</a></li>
+                            <li><a href="#project">Projects</a></li>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#skills">Skills</a></li>
                         </ul>
                     </div>
                 </div>
