@@ -1,0 +1,89 @@
+.login-wrapper{
+    background-color: var(--grayish-blue);
+    padding: 100px 0;
+}
+
+.login-content{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.login-content article {
+    padding: 48px 40px;
+    background-color: white;
+    border-radius: 0 0 8px 8px;
+}
+
+.login-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-content input, button{
+    margin-bottom: 24px;
+    border: 2px solid var(--grayish-blue);
+    padding: 18px 24px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+
+.login-content form input {
+    border: 2px solid var(--grayish-blue);
+}
+
+.login-content form input:focus {
+    border: 2px solid var(--blue);
+}
+
+.login-content form .submit {
+    background-color: var(--green);
+    color: white;
+    border: none;
+    margin-top: 24px;
+    margin-bottom: 0;
+}
+
+.login-content form .submit:focus{
+    outline: none;
+    border: none;
+    background-color: var(--dark-green);
+
+}
+
+.login-content .terms {
+    text-align: center;
+    color: var(--grayish-blue);
+    margin-top: 16px;
+}
+
+.login-content .highlight {
+    color: var(--red);
+}
+
+.tab {
+    margin: 0 auto;
+}
+
+.tab button {
+    margin-bottom: 0;
+    width: 50%;
+    border: 0;
+}
+
+.tab button:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+.tab button:last-child {
+    border-radius: 0 8px 0 0;
+}
+
+.tablink{
+    outline: none;
+    color: var(--grayish-blue);
+}
+
+.tab-select {
+    background-color: white;
+    color: black;
+}

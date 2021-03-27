@@ -1,0 +1,20 @@
+.footer-wrapper{
+    background-color: var(--light-gray);
+}
+
+.footer-list {
+    padding: 18px;
+    color: var(--violet);
+    display: flex;
+    margin-left: auto;
+    width: fit-content;
+}
+
+.footer-list li {
+    margin-right: 16px;
+    font-weight: 600;
+}
+
+.footer-list li:last-child {
+    margin-right: 0;
+}
