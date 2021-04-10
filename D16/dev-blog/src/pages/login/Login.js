@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./Login.css";
+import {connect} from 'react-redux';
+import operations from 'store/operations';
+import actions from 'store/actions';
 
 const LOGIN = "Login";
 const REGISTER = "Register";
@@ -41,10 +44,23 @@ class Login extends Component {
         this.setState({ visibleTab: tab });
     };
 
+
+    async componentDidMount(){
+        // const {getApp} = operations;
+        // const data = await getApp();
+
+        const {getApp}= this.props;
+        //getApp();
+
+        //console.log(">>> mount ",data);
+    }
+
     render() {
         const { visibleTab } = this.state;
         const loginTab = visibleTab === LOGIN ? "tablink tab-select" : "tablink";
         const registerTab = visibleTab === REGISTER ? "tablink tab-select" : "tablink";
+        const {mydata}= this.props;
+        console.log(">>> ", this.props);
 
         return (
             <section className="login-wrapper">
@@ -100,4 +116,14 @@ class Login extends Component {
     }
 }
 
-export default Login;
+const mapStateToProps = (state)=>{
+    return {
+        mydata : state.data
+    }
+}
+
+const mapDispatchToProps = {
+    getApp: actions.app
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
