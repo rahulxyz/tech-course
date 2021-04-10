@@ -4,13 +4,14 @@ npm i --save react-redux redux redux-thunk
 
 chrome extension Redux Devtools
 
-Update:
-index.js
-store.js
-reducer.js
+## Update files
+
+* index.js
+* store.js
+* reducer.js
 
 
-# index.js
+## index.js
 ```
 import { Provider } from 'react-redux'
 import {store} from './store/store'; 
@@ -19,7 +20,7 @@ import {store} from './store/store';
 </Provider>
 ```
 
-# store.js
+## store.js
 ```
 import {createStore, applyMiddleware, compose} from "redux";
 import thunkMiddleware from "redux-thunk";
@@ -34,7 +35,7 @@ const enhancer = composeEnhancers(
 export const store = createStore(reducer, enhancer);
 ```
 
-# reducer.js
+## reducer.js
 ```
 const initialState = {
     appStore: true
