@@ -18,7 +18,7 @@ class Login extends Component {
 
         if(visibleTab === REGISTER){
             const registerData = {
-                username: e.target[0].value,
+                name: e.target[0].value,
                 email: e.target[1].value,
                 password: e.target[2].value,
             }
@@ -34,33 +34,38 @@ class Login extends Component {
 
     handleLogin = (loginData)=>{
         console.log(">>>login ", loginData);
+        this.props.login(loginData);
     } 
 
-    handleRegister = (registerData)=>{
+    handleRegister = async (registerData)=>{
         console.log(">>> register", registerData);
+        try{
+            await this.props.register(registerData);
+            this.setState({visibleTab: LOGIN})
+        }catch(error){
+            console.log(">>Error register: ", registerData);
+        }
     } 
 
     selectTab = (tab) => {
         this.setState({ visibleTab: tab });
     };
 
+    componentDidUpdate(prevProps){
+        const {isAuth, history} = this.props;
+       if( prevProps.isAuth !== isAuth && isAuth){
+           //route to home
+            history.push("/home")
+       }
 
-    async componentDidMount(){
-        // const {getApp} = operations;
-        // const data = await getApp();
-
-        const {getApp}= this.props;
-        //getApp();
-
-        //console.log(">>> mount ",data);
     }
+
 
     render() {
         const { visibleTab } = this.state;
         const loginTab = visibleTab === LOGIN ? "tablink tab-select" : "tablink";
         const registerTab = visibleTab === REGISTER ? "tablink tab-select" : "tablink";
-        const {mydata}= this.props;
-        console.log(">>> ", this.props);
+        
 
         return (
             <section className="login-wrapper">
@@ -118,12 +123,13 @@ class Login extends Component {
 
 const mapStateToProps = (state)=>{
     return {
-        mydata : state.data
+        isAuth: state.isAuth
     }
 }
 
 const mapDispatchToProps = {
-    getApp: actions.app
+    register: actions.register,
+    login: actions.login
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

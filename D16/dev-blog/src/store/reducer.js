@@ -1,17 +1,27 @@
 import types from "./types";
 
 const initialState = {
-    appStore: true,
-    name: "rahul"
+    user: null,
+    isAuth: false,
+    error: ""
 }
 
 function app(state = initialState, action){
-    const {APP_SUCCESS} = types;
+    const {LOGIN_SUCCESS, LOGIN_FAILURE} = types;
+
     switch(action.type){
-        case APP_SUCCESS:
+
+        case LOGIN_SUCCESS:
             return {
                 ...state,
-                data: action.payload
+                user: action.payload,
+                isAuth: true,
+                error: ""
+            }
+        
+        case LOGIN_FAILURE:
+            return {
+                ...state
             }
         default: return state;
     }
