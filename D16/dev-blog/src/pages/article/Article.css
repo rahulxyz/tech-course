@@ -1,0 +1,46 @@
+.banner-img {
+    width: 100%;
+    object-fit:cover;
+}
+
+.article-description{
+    width: 60%;
+    margin: auto;
+}
+
+.article-description > p {
+    margin-bottom: 1rem;
+}
+
+.article-description > h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    line-height: 60px;
+}
+
+.article-tags{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.article-author{
+    margin-bottom: 1.5rem;
+}
+
+.article-author p {
+    margin-bottom: 0;
+}
+
+.article-text{
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.article-tags li {
+    background-color: #f2f2f2;
+    color: #757575;
+    padding: 5px 10px;
+    width: fit-content;
+    margin-right: 0.5rem;
+}
+
