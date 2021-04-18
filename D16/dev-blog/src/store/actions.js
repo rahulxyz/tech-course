@@ -117,11 +117,41 @@ function getArticleById(id) {
     }
 }
 
+function addBlog(body) {
+
+    return async dispatch =>{
+        dispatch(request());
+
+        try{
+            const response = await operations.addBlog(body);
+            const data = response.data;
+            
+            dispatch(success(data));
+        }catch(error){
+            dispatch(failure());
+        }
+    }
+
+    function request(){
+        return {type: types.ADD_BLOG_REQUEST};
+    }
+
+    function success(payload){
+        return {type: types.ADD_BLOG_SUCCESS, payload}
+    }
+
+    function failure(error){
+        return {type: types.ADD_BLOG_FAILURE, error}
+    }
+}
+
+
 const actions ={
     register,
     login,
     getBlogList,
-    getArticleById
+    getArticleById,
+    addBlog
 }
 
 export default actions;

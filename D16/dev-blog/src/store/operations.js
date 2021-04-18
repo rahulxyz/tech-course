@@ -4,7 +4,8 @@ const endpoints={
     register: "/users/register",
     login: "/users/login",
     blogList: "feed/newsFeed",
-    articleById: (id)=>`/feed/newsFeed/${id}`
+    articleById: (id)=>`/feed/newsFeed/${id}`,
+    addBlog: "feed/createArticle"
 }
 
 
@@ -24,11 +25,16 @@ const getArticleById = (id)=>{
     return onGet(endpoints.articleById(id), null, false);
 }
 
+const addBlog = (body)=>{
+    return onPost(endpoints.addBlog, body, null, true)
+}
+
 const operations = {
     register,
     login,
     getBlogList,
-    getArticleById
+    getArticleById,
+    addBlog 
 }
 
 export default operations;
